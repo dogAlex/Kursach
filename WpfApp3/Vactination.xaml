@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        xmlns:themes="clr-namespace:StyledWindow.WPF.Themes;assembly=StyledWindow.WPF"
+
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="WpfApp3.Vactination"
+        mc:Ignorable="d"
+        Title="Vactination" Height="913" Width="1699"
+
+        Style="{StaticResource LocalizedStyledWindow}"
+
+
+        themes:StyledWindow.LanguageButtonVisible="False"
+        themes:StyledWindow.ThemeButtonVisible="False"
+        UseLayoutRounding="True">
+    <Grid HorizontalAlignment="Center">
+        <TextBlock HorizontalAlignment="Left" Margin="846,40,0,0" TextWrapping="Wrap" Text="Иванов Иван" VerticalAlignment="Top" Height="76" Width="622" FontSize="48" RenderTransformOrigin="0.264,0.894" TextAlignment="Right"/>
+        <Ellipse x:Name="ellipse_Копировать" HorizontalAlignment="Left" Height="100" Margin="1491,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="100">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </Ellipse.Fill>
+
+        </Ellipse>
+        <Ellipse x:Name="ellipse" HorizontalAlignment="Left" Height="100" Margin="1491,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="100">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/icons8-пользователь-мужчина-в-кружке-96.png" Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button Content="Карты" HorizontalAlignment="Left" Margin="31,40,0,0" VerticalAlignment="Top" Height="76" Width="195" Click="Button_Click" FontSize="22"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="470,200,0,0"/>
+
+
+    </Grid>
+</Window>
